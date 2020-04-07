@@ -4,12 +4,20 @@ type: docker
 name: default
 
 steps:
+- name: build docker image
+  image: docker:latest
+  volumes:
+      - name: docker_sock
+        path: /var/run/docker.sock
+  commands:
+      - docker build -t go-sensors -f Dockerfile .
+
 - name: get dependencies
-  image: golang
+  image: go-sensors
   commands:
   - go get
-  
+
 - name: build
-  image: golang
+  image: go-sensors
   commands:
   - go build
