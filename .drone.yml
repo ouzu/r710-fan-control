@@ -14,11 +14,13 @@ steps:
 
 - name: get dependencies
   image: go-sensors
+  pull: if-not-exists
   commands:
   - go get
 
 - name: build
   image: go-sensors
+  pull: if-not-exists
   commands:
   - go build
 
