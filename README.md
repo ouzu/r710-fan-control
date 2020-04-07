@@ -1,3 +1,5 @@
+[![Build Status](https://ci.laze.today/api/badges/ouzu/r710-fan/status.svg)](https://ci.laze.today/ouzu/r710-fan)
+
 # R710 fan control
 
 This little program controls the fans of my Dell R710 server.
