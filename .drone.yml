@@ -21,3 +21,8 @@ steps:
   image: go-sensors
   commands:
   - go build
+
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
