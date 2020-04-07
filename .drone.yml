@@ -1,0 +1,15 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: get dependencies
+  image: golang
+  commands:
+  - go get
+  
+- name: build
+  image: golang
+  commands:
+  - go build
